@@ -21,7 +21,7 @@ main {
 
 #auto-complete {
   max-height: 300px;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 #auto-complete li {
@@ -53,6 +53,8 @@ main {
   height: auto;
   width: 70vw;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
@@ -63,10 +65,10 @@ main {
 }
 
 .details {
-  height: 400px;
+  height: auto;
   width: auto;
 
-  color: aliceblue;
+  color: rgba(240, 248, 255, 0);
   font-weight: bold;
   overflow-y: auto;
   padding-left: 15px;
