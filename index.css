@@ -46,7 +46,7 @@ main {
 #searchContainer {
   max-height: auto;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .container {
@@ -61,7 +61,7 @@ main {
 .img img {
   height: 400px;
   width: auto;
-  border: 1px rgb(74, 212, 50) solid;
+  /* border: 1px rgb(74, 212, 50) solid; */
 }
 
 .details {
@@ -71,7 +71,7 @@ main {
   color: rgba(240, 248, 255, 0);
   font-weight: bold;
   overflow-y: auto;
-  padding-left: 15px;
+  /* padding-left: 15px; */
 }
 
 #powerstats {
