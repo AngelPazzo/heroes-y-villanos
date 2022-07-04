@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
   flex-wrap: wrap;
 }
 
