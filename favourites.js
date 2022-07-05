@@ -3,7 +3,7 @@ let list = [];
 list = JSON.parse(localStorage.getItem("favlistarr"));
 
 function fetching(list) {
-  for (var i = 0; i < list.length; i++) {
+  for (let i = 0; i < list.length; i++) {
     loadhero(list[i]);
   }
 }

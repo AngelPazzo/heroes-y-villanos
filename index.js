@@ -5,11 +5,11 @@ const ul = document.getElementById("auto-complete");
 
 let hero = [];
 let favarray = [];
-var heroid = 0;
-var favid = 0;
+let heroid = 0;
+let favid = 0;
 
 search.onkeyup = function () {
-  var searchname = search.value;
+  let searchname = search.value;
   if (searchname !== "") {
     fetch(
       "https://superheroapi.com/api.php/ 3328323083897178/search/" +
@@ -19,11 +19,11 @@ search.onkeyup = function () {
       .then((data) => {
         console.log(data);
         function showhero() {
-          var heronames = data.results;
+          let heronames = data.results;
           console.log(data.results);
           ul.innerText = " ";
-          for (var i of heronames) {
-            var li = document.createElement("li");
+          for (let i of heronames) {
+            let li = document.createElement("li");
             li.innerHTML = i.name;
             li.id = i.id;
 
@@ -50,28 +50,28 @@ function loadDetails(heroid) {
     .then((data) => {
       console.log(data);
 
-      var details = document.getElementById("details");
+      let details = document.getElementById("details");
       details.setAttribute("style", "background-color:rgba(0,0,0,0.8);");
 
-      var img = document.getElementById("img");
+      let img = document.getElementById("img");
       img.setAttribute("src", data.image.url);
 
-      var name = document.getElementById("name");
+      let name = document.getElementById("name");
       name.innerHTML = data.name;
 
-      var bio = document.getElementById("bio");
+      let bio = document.getElementById("bio");
       bio.innerHTML = " Relatives :" + data.connections.relatives;
 
-      var good = document.getElementById("good");
+      let good = document.getElementById("good");
       good.innerText = "Nature :" + data.biography.alignment;
 
-      var base = document.getElementById("base");
+      let base = document.getElementById("base");
       base.innerHTML = "Work :" + data.work.base;
 
-      var occ = document.getElementById("occupation");
+      let occ = document.getElementById("occupation");
       occ.innerHTML = "Occupation :" + data.work.occupation;
 
-      var powestat = document.getElementById("powerstats");
+      let powestat = document.getElementById("powerstats");
       powestat.innerHTML =
         "Intelligence : " +
         data.powerstats.intelligence +
@@ -84,7 +84,7 @@ function loadDetails(heroid) {
         ", Strength : " +
         data.powerstats.strength;
 
-      var favv = document.getElementById("favbtn");
+      let favv = document.getElementById("favbtn");
       favv.setAttribute("style", "display:flex;");
       favv.setAttribute("value", data.id);
     })
