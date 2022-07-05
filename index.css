@@ -65,10 +65,14 @@ main {
   flex-wrap: wrap;
   padding: 10px;
 }
-
+.img {
+  display: flex;
+  justify-content: center;
+}
 .img img {
   height: 400px;
   width: auto;
+
   /* border: 1px rgb(74, 212, 50) solid; */
 }
 
@@ -87,7 +91,7 @@ main {
 }
 
 #bio {
-  color: blue;
+  color: rgb(224, 238, 70);
 }
 
 #favbtn {
@@ -96,4 +100,23 @@ main {
 
 #logo {
   color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100vw;
+  }
+  .img img {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .details {
+    height: auto;
+    width: auto;
+    padding-left: 15px;
+  }
 }
